@@ -106,7 +106,7 @@ python search_for_complex_reasoning_path_chinese_version.py \
   journal = {arXiv preprint arXiv:2412.18925},
   year = {2024}
 }
-
+> blockquote
 @article{lan2025clinicalgpt,
   author = {Lan, W. and Wang, W. and Ji, C. and others},
   title = {ClinicalGPT-R1: Pushing reasoning capability of generalist disease diagnosis with large language model},
