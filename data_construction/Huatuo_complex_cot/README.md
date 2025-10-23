@@ -62,6 +62,8 @@ python search_for_complex_reasoning_path_chinese_version.py \
   --num_process 8
 ```
 
+
+
 ## 输出与目录结构
 - 单样本输出：
   - 中文版：`output_data/<model_name>/<task_name>/<process_id>.json`
@@ -95,3 +97,19 @@ python search_for_complex_reasoning_path_chinese_version.py \
 ## 结果检查
 - 单样本：检查对应 `process_id.json` 是否包含 `Complex_CoT` 与 `Response`。
 - 合并输出：确认生成 `task_name_<N>.json`，并检查样本数与内容完整性。
+
+
+> blockquote
+@article{chen2024huatuogpt,
+  author = {Chen, J. and Cai, Z. and Ji, K. and others},
+  title = {Huatuogpt-o1: Towards medical complex reasoning with LLMs},
+  journal = {arXiv preprint arXiv:2412.18925},
+  year = {2024}
+}
+
+@article{lan2025clinicalgpt,
+  author = {Lan, W. and Wang, W. and Ji, C. and others},
+  title = {ClinicalGPT-R1: Pushing reasoning capability of generalist disease diagnosis with large language model},
+  journal = {arXiv preprint arXiv:2504.09421},
+  year = {2025}
+}
