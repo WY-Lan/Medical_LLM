@@ -99,8 +99,8 @@ python search_for_complex_reasoning_path_chinese_version.py \
 - 合并输出：确认生成 `task_name_<N>.json`，并检查样本数与内容完整性。
 
 
-> blockquote
+> 
 Chen J, Cai Z, Ji K, et al. Huatuogpt-o1, towards medical complex reasoning with llms. arXiv preprint arXiv:2412.18925, 2024.
 
-> blockquote
+> 
 Lan W, Wang W, Ji C, et al. Clinicalgpt-r1: Pushing reasoning capability of generalist disease diagnosis with large language model. arXiv preprint arXiv:2504.09421, 2025.
