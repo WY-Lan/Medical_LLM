@@ -1,0 +1,58 @@
+# 默认配置文件
+
+# 通用配置
+general:
+  max_workers: 8                  # 并行处理的最大线程数
+  max_items: 1000                 # 最大处理数量
+  log_level: INFO                 # 日志级别 (DEBUG, INFO, WARNING, ERROR)
+  checkpoint_interval: 50         # 每处理多少个文件保存一次检查点
+
+# 路径配置
+paths:
+  input_dir: data             # 输入数据目录
+  output_dir: output              # 输出数据目录
+  mapping_dir: config/mapping     # 映射配置文件目录
+  log_dir: logs                   # 日志目录
+
+# 第一阶段：HTML 转 JSON
+stage_one:
+  enabled: true                   # 是否启用第一阶段
+  batch_size: 100                 # 批处理大小
+  output_dir: output/stage_one    # 输出目录
+
+# 第二阶段：内容提取与映射
+stage_two:
+  enabled: true                   # 是否启用第二阶段
+  output_dir: output/stage_two    # 输出目录
+  fuzzy_match_threshold: 0.8      # 模糊匹配阈值（值越大匹配越精确）
+  
+  # API 配置
+  api:
+    endpoint: https://yunwu.ai    # 4o API 端点
+    key: sk-846vAFyXMjPEEDUyU4iSifp6BMfq0OlqBlAo7yXbK1yRN1V4   # API 密钥（从环境变量读取）
+    model: gpt-4.1-mini-2025-04-14            # 使用的模型名称
+    timeout: 60                   # API 超时时间(秒)
+    retry_attempts: 3             # 重试次数
+    retry_delay: 5                # 重试间隔(秒)
+    save_responses: true          # 是否保存API请求和响应
+
+# 第三阶段：CoT 生成
+stage_three:
+  enabled: true                   # 是否启用第三阶段
+  output_dir: output/stage_three  # 输出目录
+  
+  # API 配置
+  api:
+    endpoint: https://yunwu.ai    # 4o API 端点
+    key: sk-846vAFyXMjPEEDUyU4iSifp6BMfq0OlqBlAo7yXbK1yRN1V4   # API 密钥（从环境变量读取）
+    model: gpt-4.1-mini-2025-04-14          # 使用的模型名称
+    timeout: 60                   # API 超时时间(秒)
+    retry_attempts: 3             # 重试次数
+    retry_delay: 5                # 重试间隔(秒)
+    save_responses: true          # 是否保存API请求和响应
+  
+  # CoT 生成配置
+  cot:
+    model: 4o                     # CoT 生成模型
+    max_tokens: 3000              # 每个 CoT 步骤的最大 token 数
+    temperature: 0.7              # 采样温度

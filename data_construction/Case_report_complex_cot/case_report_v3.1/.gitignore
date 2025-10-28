@@ -1,0 +1,16 @@
+data/
+logs/
+*.logs
+*.log.*
+*.log.*.*
+*.log.*.*.*
+*.log.*.*.*.*
+*.log.*.*.*.*.*
+
+output/
+*.out
+*.out.*
+*.out.*.*
+*.out.*.*.*
+*.out.*.*.*.*
+*.out.*.*.*.*.*
